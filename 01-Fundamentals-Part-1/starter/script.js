@@ -199,10 +199,10 @@ console.log(favoriteNumber);
 console.log(typeof favoriteNumber)
 
 if (favoriteNumber === 12) {
-    console.log('Tits, 12 is an amazing number')
-    alert("12 is the tits!!!!")
+    console.log('Cool, 12 is an amazing number')
+    alert("12 is cool!!!!")
 } else if (favoriteNumber !== 12) {
-    alert("You didn't pick 12, so you a bitch")
+    alert("You didn't pick 12, so you smell")
 };
 
 // Exercise
