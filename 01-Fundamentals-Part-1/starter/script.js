@@ -194,20 +194,28 @@
 
 // console.log('18' === 18);
 
-const favoriteNumber = Number(prompt("What's your favorite number?"));
-console.log(favoriteNumber);
-console.log(typeof favoriteNumber)
+// const favoriteNumber = Number(prompt("What's your favorite number?"));
+// console.log(favoriteNumber);
+// console.log(typeof favoriteNumber)
 
-if (favoriteNumber === 12) {
-    console.log('Cool, 12 is an amazing number')
-    alert("12 is cool!!!!")
-} else if (favoriteNumber !== 12) {
-    alert("You didn't pick 12, so you smell")
-};
+// if (favoriteNumber === 12) {
+//     console.log('Cool, 12 is an amazing number')
+//     alert("12 is cool!!!!")
+// } else if (favoriteNumber !== 12) {
+//     alert("You didn't pick 12, so you smell")
+// };
 
 // Exercise
 
 const numNeighbors = Number(prompt("How many neighbor countries does your country have?"));
 console.log(numNeighbors);
+
+if (numNeighbors == 1) {
+    console.log("Only 1 border!")
+} else if(numNeighbors > 1) {
+    console.log("More than 1 border")
+} else {
+    console.log("No borders")
+};
 
 
