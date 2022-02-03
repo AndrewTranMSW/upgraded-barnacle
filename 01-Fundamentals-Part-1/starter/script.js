@@ -205,17 +205,111 @@
 //     alert("You didn't pick 12, so you smell")
 // };
 
-// Exercise
+// Exercise Coding Challenge 2
 
-const numNeighbors = Number(prompt("How many neighbor countries does your country have?"));
-console.log(numNeighbors);
+// const numNeighbors = Number(prompt("How many neighbor countries does your country have?"));
+// console.log(numNeighbors);
 
-if (numNeighbors == 1) {
-    console.log("Only 1 border!")
-} else if(numNeighbors > 1) {
-    console.log("More than 1 border")
+// if (numNeighbors === 1) {
+//     alert("Only 1 border!")
+// } else if(numNeighbors > 1) {
+//     alert("More than 1 border")
+// } else {
+//     alert("No borders")
+// };
+
+// Boolean logic: the And, Or, and Not operators
+// and: && -- both conditions need to be true for the result to be true
+// or: || -- only one condition needs to be true for it to return true
+// not: != -- makes a true value false and a false value true
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+
+// if(hasDriversLicense && hasGoodVision){
+//     console.log("Sarah is able to drive") 
+// } else {
+//     console.log("Someone else should drive")
+// };
+
+// const isTired = false; // C
+// console.log(hasDriversLicense && hasGoodVision && isTired);
+
+// if(hasDriversLicense && hasGoodVision && !isTired){
+//     console.log("Sarah is able to drive") 
+// } else {
+//     console.log("Someone else should drive")
+// };
+
+// Exercise Coding Challenge 3
+//Calculate the ave scores of each team.
+//Compare the average scores to determine the winner--make sure there is a tie clause.
+//This will log Dolphins as the winner
+
+// const dolphinAvg = (96 + 108 + 89) / 3;
+// const koalaAvg =  (88 + 91 + 110) / 3;
+// console.log(dolphinAvg);
+// console.log(koalaAvg);
+
+// if (dolphinAvg > koalaAvg) {
+//     console.log("Dolphins Win!🏆");
+// } else if (koalaAvg > dolphinAvg){
+//     console.log("Koalas Win!🏆");
+// } else {
+//     console.log("It's a tie!");
+// };
+
+// Bonus 1:
+//Include a requirement for a minimum score of 100--a team ONLY wins if it has a higher score than the other team AND they scored at least 100.
+//This will log Koalas as the winner
+
+// const dolphinAvg = (97 + 112 + 101) / 3;
+// const koalaAvg =  (109 + 95 + 123) / 3;
+// const dolphinScored100 = dolphinAvg >= 100;
+// const koalaScored100 = koalaAvg >= 100;
+// console.log(dolphinAvg);
+// console.log(koalaAvg);
+// console.log(dolphinScored100);
+// console.log(koalaScored100);
+
+// if(dolphinAvg > koalaAvg && dolphinScored100){
+//     console.log("Dolphins win!🏆");
+// } else if (koalaAvg > dolphinAvg && koalaScored100){
+//     console.log("Koalas win!🏆");
+// } else if (dolphinAvg > koalaAvg && !dolphinScored100){
+//     console.log("Dolphins scored higher than Koalas, but didn't score at least 100");
+// } else if (koalaAvg > dolphinAvg && !koalaScored100){
+//     console.log("Koalas scored higher than Dolphins, but didn't score at least 100");
+// } else {
+//     console.log("It was a tie");
+// };
+
+//Bonus 2:
+//Minimum score also applies to a draw. A draw happens when both teams have the same score AND both have a score greater or equal to 100. Otherwise, there's no winner.
+//This will log a tie
+
+const dolphinAvg = (97 + 112 + 101) / 3;
+const koalaAvg =  (109 + 95 + 106) / 3;
+const dolphinScored100 = dolphinAvg > 100;
+const koalaScored100 = koalaAvg > 100;
+console.log(dolphinAvg);
+console.log(koalaAvg);
+console.log(dolphinScored100);
+console.log(koalaScored100);
+
+if(dolphinAvg > koalaAvg && dolphinScored100){
+    console.log("Dolphins win!🏆")
+} else if (koalaAvg > dolphinAvg && koalaScored100){
+    console.log("Koalas win!🏆")
+} else if (dolphinAvg > koalaAvg && !dolphinScored100){
+    console.log("Dolphins scored higher than Koalas, but didn't score at least 100")
+} else if (koalaAvg > dolphinAvg && !koalaScored100){
+    console.log("Koalas scored higher than Dolphins, but didn't score at least 100")
 } else {
-    console.log("No borders")
+    console.log("It was a tie")
 };
-
-
