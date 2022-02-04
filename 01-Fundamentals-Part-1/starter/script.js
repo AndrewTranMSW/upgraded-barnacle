@@ -399,3 +399,27 @@ const drink = age >= 18 ? "beer 🍻" : "juice 🧃";
 
 //This can also be used in a template literal--will save you keystrokes!
 console.log(`I like to drink ${age >= 18 ? "beer 🍻" : "juice 🧃"}`)
+
+// Coding Challenge 4
+
+// Steven wants to build a tip calculator 
+    // Tip of 15% will be given if the bill is between $50 and $300.
+    // Otherwise, the tip will be 20%
+
+// Calculate the tip depending on the bill value
+    // Create a variable 'tip'
+    // DO NOT use an if else statement--use a ternary operator
+    //Console.log:
+        //Bill value
+        //Tip
+        //Bill + Tip
+    //Test data: 275, 40, 430
+
+let tip;
+const bill = 430;
+const tipAmount = bill > 50 && bill <= 275 ? (tip = (bill * 1.15) - (bill)) : (tip = (bill * 1.20) - (bill))
+const total = tipAmount + bill;
+console.log(`The bill value is ${bill}, the tip amount is ${tipAmount}, and the total is ${total}.`)
+
+
+
