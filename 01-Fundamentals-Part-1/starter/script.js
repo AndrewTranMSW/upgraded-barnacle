@@ -293,25 +293,77 @@
 //Minimum score also applies to a draw. A draw happens when both teams have the same score AND both have a score greater or equal to 100. Otherwise, there's no winner.
 //This will log a tie
 
-const dolphinAvg = (97 + 112 + 101) / 3;
-const koalaAvg =  (109 + 95 + 106) / 3;
-const dolphinScored100 = dolphinAvg > 100;
-const koalaScored100 = koalaAvg > 100;
-console.log(dolphinAvg);
-console.log(koalaAvg);
-console.log(dolphinScored100);
-console.log(koalaScored100);
+// const dolphinAvg = (97 + 112 + 101) / 3;
+// const koalaAvg =  (109 + 95 + 106) / 3;
+// const dolphinScored100 = dolphinAvg > 100;
+// const koalaScored100 = koalaAvg > 100;
+// console.log(dolphinAvg);
+// console.log(koalaAvg);
+// console.log(dolphinScored100);
+// console.log(koalaScored100);
 
-if(dolphinAvg > koalaAvg && dolphinScored100){
-    console.log("Dolphins win!🏆")
-} else if (koalaAvg > dolphinAvg && koalaScored100){
-    console.log("Koalas win!🏆")
-} else if (dolphinAvg > koalaAvg && !dolphinScored100){
-    console.log("Dolphins scored higher than Koalas, but didn't score at least 100")
-} else if (koalaAvg > dolphinAvg && !koalaScored100){
-    console.log("Koalas scored higher than Dolphins, but didn't score at least 100")
-} else {
-    console.log("It was a tie")
-};
+// if(dolphinAvg > koalaAvg && dolphinScored100){
+//     console.log("Dolphins win!🏆")
+// } else if (koalaAvg > dolphinAvg && koalaScored100){
+//     console.log("Koalas win!🏆")
+// } else if (dolphinAvg > koalaAvg && !dolphinScored100){
+//     console.log("Dolphins scored higher than Koalas, but didn't score at least 100")
+// } else if (koalaAvg > dolphinAvg && !koalaScored100){
+//     console.log("Koalas scored higher than Dolphins, but didn't score at least 100")
+// } else {
+//     console.log("It was a tie")
+// };
 
 // The Switch Statement
+
+// const day = prompt("what day is it?");
+
+// switch(day) {
+//     case 'monday': // day === 'monday'
+//         console.log("Plan how to buy a GPU");
+//         console.log("Go to the farmer's market");
+//         break;
+//     case 'tuesday':
+//         console.log("Watch Finding Nemo");
+//         console.log("Watch Shang-Chi");
+//         break;
+//     //this will execute for both wednesday and thursday because there's no break
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log("Pet my dogs");
+//         break;
+//     case 'friday':
+//         console.log("Watch YouTube");
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log("Do nothing");
+//         break;
+//     //Below is the edge-case
+//     default:
+//         console.log("Not a valid day") // basically like an else block
+// }
+
+//Try writing the switch statement as an if else statement.
+
+// const day = prompt("What day is it?");
+
+// if (day === "monday") {
+//     console.log("it's monday");
+// } else if (day === "tuesday") {
+//     console.log("It's Tuesday");
+// } else if ( day === "wednesday" || day === "thursday") {
+//     console.log("It's either Wednesday or Thursday");
+// } else if ( day === "friday") {
+//     console.log("Issa Friday");
+// } else if (day === "saturday" || day === "sunday") {
+//     console.log("It's the weekend--do nothing!"); 
+// } else {
+//     console.log("You didn't choose a valid day");
+// };
+
+//The switch statement isn't as widely used anymore but it has it's scenarios where it makes sense to use over the if else statement.
+
+//Statements and Expressions
+// Expression - A piece of code that produces a value. I.E. 3 + 4 = 7
+// Numbers are also expressions
