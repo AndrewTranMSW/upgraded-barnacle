@@ -313,3 +313,5 @@ if(dolphinAvg > koalaAvg && dolphinScored100){
 } else {
     console.log("It was a tie")
 };
+
+// The Switch Statement
