@@ -367,3 +367,35 @@
 //Statements and Expressions
 // Expression - A piece of code that produces a value. I.E. 3 + 4 = 7
 // Numbers are also expressions
+// Booleans are also expressions
+
+// Statements are like a bigger piece of code that don't necessarily produce a value.
+// Statements are like complete sentences whereas expressions are the words that make up the sentence.
+// An If Else statement is an example of a statement. A switch case is also an example of a statement.
+
+// Expressions would be placed in the statement to produce a value 
+// The if statement is a statement, the 2 > 1 is an expression.
+// if (2 > 1) {
+//     console.log(true);
+// }
+
+// Conditional Operator
+// Good for comparing two scenarios--pretty much an If Else statement
+
+const age = 23;
+const drink = age >= 18 ? "beer 🍻" : "juice 🧃";
+// console.log(drink);
+
+//Same as:
+
+//This variable is defined outside but can be used inside this statement and available to the code blocks in the if else statement
+// let drink2;
+// if(age >= 18) {
+//     drink2 = "I like to drink beer 🍻";
+// } else {
+//     drink2 = "I like to drink juice 🧃";
+// }
+// console.log(drink2);
+
+//This can also be used in a template literal--will save you keystrokes!
+console.log(`I like to drink ${age >= 18 ? "beer 🍻" : "juice 🧃"}`)
