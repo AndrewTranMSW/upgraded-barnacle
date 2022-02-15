@@ -115,22 +115,57 @@
 // console.log(age3);
 
     //How many years a person has left until retirement.
-const yearsUntilRetirement = (birthYear, firstName) => {
-    const age = 2022 - birthYear;
-    const retirement = 65 - age;
-    return `${firstName} retires in ${retirement} years. Hopefully.`
-};
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2022 - birthYear;
+//     const retirement = 65 - age;
+//     return `${firstName} retires in ${retirement} years. Hopefully.`
+// };
 
-console.log(yearsUntilRetirement(1991, 'Andrew'));
-console.log(yearsUntilRetirement(1991, 'Phavy'));
+// console.log(yearsUntilRetirement(1991, 'Andrew'));
+// console.log(yearsUntilRetirement(1991, 'Phavy'));
 
     //Exercise
     //Recreate the last assignment, but create an arrow function called percentageOfWorld3
 
-const percentageOfWorld3 = (population) => {
-    return((population / 7900000000)*100);
+// const percentageOfWorld3 = (population) => {
+//     return((population / 7900000000)*100);
+// };
+
+// const finlandPop = console.log("Finland has " +percentageOfWorld3(6000000)+ " percent of the world's population.");
+// const usaPop = console.log("USA has "+ percentageOfWorld3(330000000)+ " percent of the world's population.");
+// const vietnamPop = console.log("Vietnam has "+ percentageOfWorld3(97000000)+ " percent of the world's population.");
+
+    //Functions calling other functions
+
+// function cutFruitPieces(fruit){
+//     return fruit * 4;
+// };
+
+
+// function fruitProcessor(apples, oranges){
+//     const applePieces = cutFruitPieces(apples);
+//     console.log(applePieces);
+//     const orangePieces = cutFruitPieces(oranges);
+//     console.log(orangePieces);
+//     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+//     return juice;
+// };
+
+// console.log(fruitProcessor(2, 3));
+
+    // Exercise: Create a function called 'describePopulation'. Use the function type you like the most.
+    // The function takes in two parameters: country and population
+
+const describePopulation = (country, population) => {
+    const percentage = percentageOfWorld1(population);
+    const description = `${country} has ${population} million people and this is about ${percentage}% of the world.`;
+    console.log(description)
 };
 
-const finlandPop = console.log("Finland has " +percentageOfWorld3(6000000)+ " percent of the world's population.");
-const usaPop = console.log("USA has "+ percentageOfWorld3(330000000)+ " percent of the world's population.");
-const vietnamPop = console.log("Vietnam has "+ percentageOfWorld3(97000000)+ " percent of the world's population.");
+const percentageOfWorld1 = (population) => {
+    return((population / 7900)*100);
+};
+
+describePopulation("Vietnam", 97);
+describePopulation("USA", 330);
+describePopulation("Finland", 60);
