@@ -156,16 +156,75 @@
     // Exercise: Create a function called 'describePopulation'. Use the function type you like the most.
     // The function takes in two parameters: country and population
 
-const describePopulation = (country, population) => {
-    const percentage = percentageOfWorld1(population);
-    const description = `${country} has ${population} million people and this is about ${percentage}% of the world.`;
-    console.log(description)
+// const describePopulation = (country, population) => {
+//     const percentage = percentageOfWorld1(population);
+//     const description = `${country} has ${population} million people and this is about ${percentage}% of the world.`;
+//     console.log(description)
+// };
+
+// const percentageOfWorld1 = (population) => {
+//     return((population / 7900)*100);
+// };
+
+// describePopulation("Vietnam", 97);
+// describePopulation("USA", 330);
+// describePopulation("Finland", 60);
+
+// console.log("=============================================================================");
+
+// const calcAge = function (birthYear) {
+//     return 2022 - birthYear;
+// };
+
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//     const age = calcAge(birthYear);
+//     const retirement = 65 - age;
+//     if (retirement > 0) {
+//         console.log(`${firstName} retires in ${retirement} years`);
+//         return retirement;
+//     } else {
+//         console.log(`${firstName} has already retired!`);
+//         return -1;
+//     }
+// };
+
+// console.log(yearsUntilRetirement(1991, 'Andrew'));
+// console.log(yearsUntilRetirement(1955, 'Khoa'));
+
+//Coding Challenge #1
+
+// Two teams: Dolphins and Koalas
+
+// Each team competes 3 times, and then the avg of the 3 scores is calculated
+
+// A team wins if it has at least DOUBLE the average score of the other team, otherwise, no team wins.
+
+    //calculates the average of each team's 3 scores
+const calcAverage = (a, b, c) => {
+return (a + b + c)/(3);
+};
+    //confirms whether or not this function is working
+console.log(calcAverage(3, 4, 5));
+    //takes the avg score of each team as parameters
+const checkWinner = () => {
+if (dolphinsAverage >= (koalaAverage *2)) {
+    console.log(`Dolphins win with an average score of ${dolphinsAverage} and they scored twice or more than twice as much! The average score of the Koalas is ${koalaAverage}.`);
+} else if (koalaAverage >= (dolphinsAverage * 2)) {
+    console.log(`Koalas win with an average score of ${koalaAverage} and they scored twice or more than twice as much! The average score of the Dolphins is ${dolphinsAverage}.`)
+} else {
+    console.log(`There is no winner in this because no team scored double the score of another.`)
+};
 };
 
-const percentageOfWorld1 = (population) => {
-    return((population / 7900)*100);
-};
+    //Test data 1
+// let dolphinsAverage = calcAverage(44, 23, 71);
+// let koalaAverage = calcAverage(65, 54, 49);
+// console.log(dolphinsAverage, koalaAverage);
+    //Test data 2
+const dolphinsAverage = calcAverage(85, 54, 41);
+const koalaAverage = calcAverage(23, 34, 27);
+console.log(dolphinsAverage, koalaAverage);
+    // Calling the checkWinner function
+checkWinner();
 
-describePopulation("Vietnam", 97);
-describePopulation("USA", 330);
-describePopulation("Finland", 60);
+//ARRAYS
