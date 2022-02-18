@@ -295,42 +295,74 @@
 
 //Basic Array Operations (Methods)
 
-const allTheHomies = ["Ted", "Andrew", "David", "An"];
+// const allTheHomies = ["Ted", "Andrew", "David", "An"];
 
-    //push is a method(also a function) that will add to the END of array
-allTheHomies.push('Cody');
-    //Cody will be added to the end.
-console.log(allTheHomies);
+//     //push is a method(also a function) that will add to the END of array
+// allTheHomies.push('Cody');
+//     //Cody will be added to the end.
+// console.log(allTheHomies);
 
-    //unshift is a method(also a function) that will add to the BEGINNING of an array
-allTheHomies.unshift('Jay');
-    //Jay will be added to the beginning.
-console.log(allTheHomies);
+//     //unshift is a method(also a function) that will add to the BEGINNING of an array
+// allTheHomies.unshift('Jay');
+//     //Jay will be added to the beginning.
+// console.log(allTheHomies);
 
-    //pop will remove remove from the END of an array
-allTheHomies.pop(2);
-    //Cody will be deleted
-console.log(allTheHomies);
+//     //pop will remove remove from the END of an array
+// allTheHomies.pop(2);
+//     //Cody will be deleted
+// console.log(allTheHomies);
 
-    //shift is a method that will remove from the BEGINNING of an array
-allTheHomies.shift();
-    //Jay will be deleted
-console.log(allTheHomies);
+//     //shift is a method that will remove from the BEGINNING of an array
+// allTheHomies.shift();
+//     //Jay will be deleted
+// console.log(allTheHomies);
 
-    //indexOf will show us the place in the array where an element is.
-    //this should return '2'.
-console.log(allTheHomies.indexOf("David"));
+//     //indexOf will show us the place in the array where an element is.
+//     //this should return '2'.
+// console.log(allTheHomies.indexOf("David"));
 
-    //includes will provide a boolean of whether or not the element exists in the array. This tests with strict equality (===)
-    //returns true
-console.log(allTheHomies.includes("David"));
-    //returns false
-console.log(allTheHomies.includes("Dan"));
-    //this would be similar to:
-if (allTheHomies.includes("David")) {
-    console.log("You have a friend named David");
-} else {
-    console.log("You don't have a friend named David");
-};
+//     //includes will provide a boolean of whether or not the element exists in the array. This tests with strict equality (===)
+//     //returns true
+// console.log(allTheHomies.includes("David"));
+//     //returns false
+// console.log(allTheHomies.includes("Dan"));
+//     //this would be similar to:
+// if (allTheHomies.includes("David")) {
+//     console.log("You have a friend named David");
+// } else {
+//     console.log("You don't have a friend named David");
+// };
 
 //Coding challenge #2
+
+    //Tip 15% if the bill value is >= 50 && < 300.
+    //Tip 20% if the bill is < 50 and >= 300.
+    //Write function called const calcTip = () => {}. 
+        //This will take in the bill value and returns the tip value based on the condition.
+        //Test this with a bill value of 100.
+
+let bills = [125, 555, 44];
+const billValue = bills[0];
+
+const calcTip = () => {
+    if (billValue >= 50 && billValue <= 300) {
+        const total15 = billValue * 1.15;
+        const tipAmount15 = billValue * .15;
+        console.log(`Your bill before tip is ${billValue}, with a 15% tip of ${tipAmount15}, your bill total will be ${total15}`)
+    } else {
+        const total20 = billValue * 1.20;
+        const tipAmount20 = billValue * .20;
+        console.log(`Your bill before tip is ${billValue}, with a 20% tip of ${tipAmount20}, your bill total will be ${total20}`)
+    }
+};
+
+calcTip();
+
+    //Same as above but with ternary method
+// const billValue = 305;
+// const total15 = billValue * 1.15;
+// const tipAmount15 = billValue * .15;
+// const total20 = billValue * 1.20;
+// const tipAmount20 = billValue * .20;
+
+// billValue >= 50 && billValue < 300 ? console.log(`Your bill before tip is ${billValue}, with a 15% tip of ${tipAmount15}, your bill total will be ${total15}`) : console.log(`Your bill before tip is ${billValue}, with a 20% tip of ${tipAmount20}, your bill total will be ${total20}`);
