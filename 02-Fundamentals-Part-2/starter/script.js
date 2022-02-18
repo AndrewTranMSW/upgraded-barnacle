@@ -200,31 +200,137 @@
 // A team wins if it has at least DOUBLE the average score of the other team, otherwise, no team wins.
 
     //calculates the average of each team's 3 scores
-const calcAverage = (a, b, c) => {
-return (a + b + c)/(3);
-};
-    //confirms whether or not this function is working
-console.log(calcAverage(3, 4, 5));
-    //takes the avg score of each team as parameters
-const checkWinner = () => {
-if (dolphinsAverage >= (koalaAverage *2)) {
-    console.log(`Dolphins win with an average score of ${dolphinsAverage} and they scored twice or more than twice as much! The average score of the Koalas is ${koalaAverage}.`);
-} else if (koalaAverage >= (dolphinsAverage * 2)) {
-    console.log(`Koalas win with an average score of ${koalaAverage} and they scored twice or more than twice as much! The average score of the Dolphins is ${dolphinsAverage}.`)
-} else {
-    console.log(`There is no winner in this because no team scored double the score of another.`)
-};
-};
+// const calcAverage = (a, b, c) => {
+// return (a + b + c)/(3);
+// };
+//     //confirms whether or not this function is working
+// console.log(calcAverage(3, 4, 5));
+//     //takes the avg score of each team as parameters
+// const checkWinner = () => {
+// if (dolphinsAverage >= (koalaAverage *2)) {
+//     console.log(`Dolphins win with an average score of ${dolphinsAverage} and they scored twice or more than twice as much! The average score of the Koalas is ${koalaAverage}.`);
+// } else if (koalaAverage >= (dolphinsAverage * 2)) {
+//     console.log(`Koalas win with an average score of ${koalaAverage} and they scored twice or more than twice as much! The average score of the Dolphins is ${dolphinsAverage}.`)
+// } else {
+//     console.log(`There is no winner in this because no team scored double the score of another.`)
+// };
+// };
 
-    //Test data 1
-// let dolphinsAverage = calcAverage(44, 23, 71);
-// let koalaAverage = calcAverage(65, 54, 49);
+//     //Test data 1
+// // let dolphinsAverage = calcAverage(44, 23, 71);
+// // let koalaAverage = calcAverage(65, 54, 49);
+// // console.log(dolphinsAverage, koalaAverage);
+//     //Test data 2
+// const dolphinsAverage = calcAverage(85, 54, 41);
+// const koalaAverage = calcAverage(23, 34, 27);
 // console.log(dolphinsAverage, koalaAverage);
-    //Test data 2
-const dolphinsAverage = calcAverage(85, 54, 41);
-const koalaAverage = calcAverage(23, 34, 27);
-console.log(dolphinsAverage, koalaAverage);
-    // Calling the checkWinner function
-checkWinner();
+//     // Calling the checkWinner function
+// checkWinner();
 
 //ARRAYS
+
+    //This isn't DRY
+// const friendOne = "Ted";
+// const friendTwo = "David";
+// const friendThree = "Andrew";
+
+//     //This is WET fam
+// const allTheHomies = ["Ted", "David", "Andrew", "An"];
+// console.log(allTheHomies);
+// console.log("=============================================================================");
+
+// const yearsExample = new Array(1991, 1992, 1993, 1994);
+
+// console.log(allTheHomies[2]);
+// console.log(allTheHomies[0]);
+// console.log(allTheHomies[allTheHomies.length-1]);
+
+//     //We can mutate the array. This changes the array by replacing a value with another value.
+// allTheHomies[2] = 'Monica';
+//     //This will replace Andrew with Monica.
+// console.log(allTheHomies);
+
+//     //Arrays can hold different types of data
+// const andrew = ["Andrew", "Tran", 2022-1991, "developer", allTheHomies];
+// console.log(andrew)
+
+// // Exercise
+// const calcAge = function (birthYear) {
+//     return 2022 - birthYear;
+// }
+// const years = [1990, 1967, 2002, 2010, 2018];
+//     //this will be NaN because years is an array
+// console.log(calcAge(years));
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+//     //You can also store function executions in an array as well.
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// console.log(ages);
+
+//Arrays Exercise
+    //Create an array containing 4 population values of 4 countries of your choice.
+    // You may use the values you have been using previously. Store this array into a
+    // variable called 'populations'
+// const populations = [10, 1441, 332, 83];
+// console.log(populations.length >= 4 ? true : false);
+    // Create an array called 'percentages' containing the percentages of the
+    // world population for these 4 population values. Use the function
+    // 'percentageOfWorld1' that you created earlier to compute the 4
+    // percentage values
+
+// const percentageOfWorld1 = (populations) => {
+//     return((populations / 7900)*100);
+// };
+
+// const percentages = [
+// percentageOfWorld1(populations[0]),
+// percentageOfWorld1(populations[1]), 
+// percentageOfWorld1(populations[2]), 
+// percentageOfWorld1(populations[3])
+// ];
+// console.log(percentages);
+
+//Basic Array Operations (Methods)
+
+const allTheHomies = ["Ted", "Andrew", "David", "An"];
+
+    //push is a method(also a function) that will add to the END of array
+allTheHomies.push('Cody');
+    //Cody will be added to the end.
+console.log(allTheHomies);
+
+    //unshift is a method(also a function) that will add to the BEGINNING of an array
+allTheHomies.unshift('Jay');
+    //Jay will be added to the beginning.
+console.log(allTheHomies);
+
+    //pop will remove remove from the END of an array
+allTheHomies.pop(2);
+    //Cody will be deleted
+console.log(allTheHomies);
+
+    //shift is a method that will remove from the BEGINNING of an array
+allTheHomies.shift();
+    //Jay will be deleted
+console.log(allTheHomies);
+
+    //indexOf will show us the place in the array where an element is.
+    //this should return '2'.
+console.log(allTheHomies.indexOf("David"));
+
+    //includes will provide a boolean of whether or not the element exists in the array. This tests with strict equality (===)
+    //returns true
+console.log(allTheHomies.includes("David"));
+    //returns false
+console.log(allTheHomies.includes("Dan"));
+    //this would be similar to:
+if (allTheHomies.includes("David")) {
+    console.log("You have a friend named David");
+} else {
+    console.log("You don't have a friend named David");
+};
+
+//Coding challenge #2
