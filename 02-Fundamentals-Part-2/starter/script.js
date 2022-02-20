@@ -307,7 +307,7 @@
 //     //Jay will be added to the beginning.
 // console.log(allTheHomies);
 
-//     //pop will remove remove from the END of an array
+//     //pop will remove from the END of an array
 // allTheHomies.pop(2);
 //     //Cody will be deleted
 // console.log(allTheHomies);
@@ -341,22 +341,26 @@
         //This will take in the bill value and returns the tip value based on the condition.
         //Test this with a bill value of 100.
 
-let bills = [125, 555, 44];
-const billValue = bills[0];
+// let bills = [125, 555, 44];
 
-const calcTip = () => {
-    if (billValue >= 50 && billValue <= 300) {
-        const total15 = billValue * 1.15;
-        const tipAmount15 = billValue * .15;
-        console.log(`Your bill before tip is ${billValue}, with a 15% tip of ${tipAmount15}, your bill total will be ${total15}`)
-    } else {
-        const total20 = billValue * 1.20;
-        const tipAmount20 = billValue * .20;
-        console.log(`Your bill before tip is ${billValue}, with a 20% tip of ${tipAmount20}, your bill total will be ${total20}`)
-    }
-};
 
-calcTip();
+// const calcTip = (tips) => {
+//     if (tips >= 50 && tips <= 300) {
+//         const total15 = tips * 1.15;
+//         const tipAmount15 = tips * .15;
+//         console.log(`Your bill before tip is ${tips}, with a 15% tip of ${tipAmount15}, your bill total will be ${total15}`)
+//     } else {
+//         const total20 = tips * 1.20;
+//         const tipAmount20 = tips * .20;
+//         console.log(`Your bill before tip is ${tips}, with a 20% tip of ${tipAmount20}, your bill total will be ${total20}`)
+//     }
+// };
+
+// const tips = [
+//     calcTip(bills[0]),
+//     calcTip(bills[1]), 
+//     calcTip(bills[2])
+//     ];
 
     //Same as above but with ternary method
 // const billValue = 305;
@@ -366,3 +370,112 @@ calcTip();
 // const tipAmount20 = billValue * .20;
 
 // billValue >= 50 && billValue < 300 ? console.log(`Your bill before tip is ${billValue}, with a 15% tip of ${tipAmount15}, your bill total will be ${total15}`) : console.log(`Your bill before tip is ${billValue}, with a 20% tip of ${tipAmount20}, your bill total will be ${total20}`);
+
+//Exercise: Basic Array Operations
+
+    //Create an array containing neighboring states of your choice--choose a state with 2 or 3 neighbors. Store the array into a variable called, 'neighbors'.
+// const neighbors = ["Washington", "Oregon", "Idaho"];
+// console.log(neighbors);
+//     //A new state named 'Utopia' popped the fuck out of nowhere, so make sure to add it to the end of this array:
+// neighbors.push("Utopia");
+// console.log(neighbors);
+//     //Remove the state
+// neighbors.pop("Utopia");
+// console.log(neighbors);
+//     //If your array doesn't include 'Germany', console log a message saying so
+// if (neighbors.includes("Germany")) {
+//     console.log("The array includes Germany")
+// } else {
+//     console.log("The array doesn't include Germany")
+// };
+//     //Change the name of a state: array.splice(index, amount of elements after the index you'd like to remove, "what you want to replace it with");
+// neighbors.splice(0, 1, "State of Washington");
+// console.log(neighbors);
+
+
+
+//OBJECTS
+    //Objects allow for you to define key:value pairs
+    //This is an array, no key:value pairs.
+// const andrewArray = [
+//     'Andrew',
+//     'Tran',
+//     30,
+//     'developer',
+//     ['Ted', 'David', 'Andrew', 'An']
+// ];
+
+    //This is the above in object form:
+
+// const andrew = {
+//     firstName: "Andrew",
+//     lastName: "Tran",
+//     age: 30,
+//     job: "developer",
+//     friends: ['Ted', 'David', 'Andrew', 'An']
+// };
+
+//     //In order to grab the information inside objects, you can use either the dot or bracket notation.
+
+//     //Dot notation grabbing the last name:
+// console.log(andrew.lastName);
+    
+//     //bracket notation grabbing the age:
+// console.log(andrew['age']);
+
+//     //the bracket notation will be more thorough. If we tried dot notation here, it wouldn't work.
+// // const interestedIn = prompt("What do you want to know about Andrew? Choose between firstName, lastName, age, job, and friends.");
+
+
+// // if (andrew[interestedIn]) {
+// //     console.log(andrew[interestedIn]);
+// // } else {
+// //     console.log("Wrong request. Choose between firstName, lastName, age, job, and friends.")
+// // };
+
+//     //you can add key:value pairs to an object: This adds location and the keyboard.
+
+// andrew.location = "USA";
+// andrew.keyboard = "Dygma Raise";
+// console.log(andrew);
+
+//     //Challenge
+//     //Andrew has 4 friends, and his bestman was Ted.
+
+// console.log(`${andrew.firstName} has ${andrew.friends.length} friends, his best man at the his wedding is named ${andrew.friends[0]}`);
+
+
+//Object Methods: functions inside of objects
+    //function expressions work inside of objects, not function declarations
+
+const andrew = {
+    firstName: "Andrew",
+    lastName: "Tran",
+    birthYear: 1991,
+    job: "developer",
+    friends: ['Ted', 'David', 'Andrew', 'An'],
+    hasDriversLicense: true,
+    //Function expression of calcAge is in this
+    // calcAge: function (birthYear) {
+    //     return 2022 - birthYear;
+    // }
+    //'this' refers to the current object.
+    calcAge: function () {
+        //here, we are creating a new key value of age:31
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} ${this.lastName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicense === true ? 'a' : 'no'} driver's license.`
+        
+    }
+};
+
+andrew.calcAge();
+    //Shows age.
+console.log(andrew.age);
+
+//Challenge
+    //"Andrew is a 31 year old developer, and he has a driver's license"
+console.log(andrew.getSummary());
