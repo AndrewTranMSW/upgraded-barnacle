@@ -415,6 +415,27 @@
 //     friends: ['Ted', 'David', 'Andrew', 'An']
 // };
 
+//Objects Challenge: Create an object called 'myCountry' for a country of your choice, containing
+    // properties 'country', 'capital', 'language', 'population' and
+    // 'neighbours' (an array like we used in previous assignments)
+// const myCountry = {
+//     country: "USA",
+//     capital: "Washington D.C.",
+//     language: "English",
+//     population: 329.5,
+//     neighbors: ["Canada", "Mexico"]
+// };
+
+//     // 1. Using the object from the previous assignment, log a string like this to the
+//     // console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries
+//     // and a capital called Helsinki.'
+//     // 2. Increase the country's population by two million using dot notation, and then
+//     // decrease it by two million using brackets notation.
+// myCountry.population = (331);
+// myCountry["population"] = (321);
+
+// console.log(`${myCountry.country} has a population of ${myCountry.population} million people who may or may not speak ${myCountry.language}. There are ${myCountry.neighbors.length} neighbors, ${myCountry.neighbors[0]}, and ${myCountry.neighbors[1]}`);
+
 //     //In order to grab the information inside objects, you can use either the dot or bracket notation.
 
 //     //Dot notation grabbing the last name:
@@ -459,7 +480,7 @@ const andrew = {
     // calcAge: function (birthYear) {
     //     return 2022 - birthYear;
     // }
-    //'this' refers to the current object.
+    // 'this' refers to the current object.
     calcAge: function () {
         //here, we are creating a new key value of age:31
         this.age = 2022 - this.birthYear;
@@ -468,14 +489,43 @@ const andrew = {
 
     getSummary: function() {
         return `${this.firstName} ${this.lastName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicense === true ? 'a' : 'no'} driver's license.`
-        
     }
 };
 
-andrew.calcAge();
-    //Shows age.
-console.log(andrew.age);
+// andrew.calcAge();
+//     //Shows age.
+// console.log(andrew.age);
 
-//Challenge
-    //"Andrew is a 31 year old developer, and he has a driver's license"
-console.log(andrew.getSummary());
+// //Challenge
+//     //"Andrew is a 31 year old developer, and he has a driver's license"
+// console.log(andrew.getSummary());
+
+//Challenge Object Methods
+        // 1. Add a method called 'describe' to the 'myCountry' object. This method
+        // will log a string to the console, similar to the string logged in the previous
+        // assignment, but this time using the 'this' keyword.
+        // 2. Call the 'describe' method
+        // 3. Add a method called 'checkIsland' to the 'myCountry' object. This
+        // method will set a new property on the object, called 'isIsland'.
+        // 'isIsland' will be true if there are no neighbouring countries, and false if
+        // there are. Use the ternary operator to set the property.
+    const myCountry = {
+        country: "USA",
+        capital: "Washington D.C.",
+        language: "English",
+        population: 329.5,
+        neighbors: ["Canada", "Mexico"],
+        describe: function() {
+            return `${this.country} has a population of ${this.population} million people who may or may not speak ${this.language}. There are ${this.neighbors.length} neighbors, ${this.neighbors[0]}, and ${this.neighbors[1]}. The capital is called ${this.capital}.`
+        },
+
+        checkIsland: function() {
+            this.isIsland = this.neighbors.length === 0 ? true : false;
+        }
+    };
+
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
+console.log(myCountry);
+
+//Coding Challenge #3
