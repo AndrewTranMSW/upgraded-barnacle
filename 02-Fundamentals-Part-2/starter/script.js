@@ -469,28 +469,28 @@
 //Object Methods: functions inside of objects
     //function expressions work inside of objects, not function declarations
 
-const andrew = {
-    firstName: "Andrew",
-    lastName: "Tran",
-    birthYear: 1991,
-    job: "developer",
-    friends: ['Ted', 'David', 'Andrew', 'An'],
-    hasDriversLicense: true,
-    //Function expression of calcAge is in this
-    // calcAge: function (birthYear) {
-    //     return 2022 - birthYear;
-    // }
-    // 'this' refers to the current object.
-    calcAge: function () {
-        //here, we are creating a new key value of age:31
-        this.age = 2022 - this.birthYear;
-        return this.age;
-    },
+// const andrew = {
+//     firstName: "Andrew",
+//     lastName: "Tran",
+//     birthYear: 1991,
+//     job: "developer",
+//     friends: ['Ted', 'David', 'Andrew', 'An'],
+//     hasDriversLicense: true,
+//     //Function expression of calcAge is in this
+//     // calcAge: function (birthYear) {
+//     //     return 2022 - birthYear;
+//     // }
+//     // 'this' refers to the current object.
+//     calcAge: function () {
+//         //here, we are creating a new key value of age:31
+//         this.age = 2022 - this.birthYear;
+//         return this.age;
+//     },
 
-    getSummary: function() {
-        return `${this.firstName} ${this.lastName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicense === true ? 'a' : 'no'} driver's license.`
-    }
-};
+//     getSummary: function() {
+//         return `${this.firstName} ${this.lastName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicense === true ? 'a' : 'no'} driver's license.`
+//     }
+// };
 
 // andrew.calcAge();
 //     //Shows age.
@@ -509,23 +509,142 @@ const andrew = {
         // method will set a new property on the object, called 'isIsland'.
         // 'isIsland' will be true if there are no neighbouring countries, and false if
         // there are. Use the ternary operator to set the property.
-    const myCountry = {
-        country: "USA",
-        capital: "Washington D.C.",
-        language: "English",
-        population: 329.5,
-        neighbors: ["Canada", "Mexico"],
-        describe: function() {
-            return `${this.country} has a population of ${this.population} million people who may or may not speak ${this.language}. There are ${this.neighbors.length} neighbors, ${this.neighbors[0]}, and ${this.neighbors[1]}. The capital is called ${this.capital}.`
-        },
+//     const myCountry = {
+//         country: "USA",
+//         capital: "Washington D.C.",
+//         language: "English",
+//         population: 329.5,
+//         neighbors: ["Canada", "Mexico"],
+//         describe: function() {
+//             return `${this.country} has a population of ${this.population} million people who may or may not speak ${this.language}. There are ${this.neighbors.length} neighbors, ${this.neighbors[0]}, and ${this.neighbors[1]}. The capital is called ${this.capital}.`
+//         },
 
-        checkIsland: function() {
-            this.isIsland = this.neighbors.length === 0 ? true : false;
-        }
-    };
+//         checkIsland: function() {
+//             this.isIsland = this.neighbors.length === 0 ? true : false;
+//         }
+//     };
 
-console.log(myCountry.describe());
-console.log(myCountry.checkIsland());
-console.log(myCountry);
+// console.log(myCountry.describe());
+// console.log(myCountry.checkIsland());
+// console.log(myCountry);
 
 //Coding Challenge #3
+
+    // Mark and John BMI example--BMI = mass / height ** 2 = mass / (height * height). Mass will be in kg and height in meters
+
+    // For Mark and John, create an object with firstName, mass, and height
+    // Create a calcBMI() method on each object to calculate the BMI. 
+    // Store the BMI value to a property, and also return it from the method.
+    // Console.log who has the higher BMI, together with the full name and the respective BMI. "John's BMI is ${} and is higher than Marks BMI of ${}"
+
+// const mark = {
+//     firstName: "Mark",
+//     lastName: "Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calculateBMI: function() {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// };
+
+// const john = {
+//     firstName: "John",
+//     lastName: "Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calculateBMI: function() {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// };
+
+// const compareBMI = () => mark.calculateBMI() > john.calculateBMI() ? console.log(`${mark.firstName}'s BMI of ${mark.calculateBMI()} is higher than ${john.firstName}'s BMI of ${john.calculateBMI()}.`) : console.log(`${john.firstName}'s BMI of ${john.calculateBMI()} is higher than ${mark.firstName}'s BMI of ${mark.calculateBMI()}`);
+
+// console.log(mark.calculateBMI());
+// console.log(john.calculateBMI());
+// compareBMI();
+
+//FOR LOOPS!!!!!!!!!!
+    // Allows for us to automate repetitive tasks
+
+    //for loops have three parts: the starting point, in this example--we start at 1.
+        //second part: this condition tells us when to stop. The loop keeps running while the 2nd part is true.
+        //third part: this tells us to go up one by one through the array
+
+// for(let rep = 9; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+
+    //Exercise 1 of For Loops
+    //There are elections in your country, in a small town, there are only 50 voters.
+    //Use a for loop to simulate the 50 people voting, by logging a string like this to your console: "Voter number 1 is currently voting"
+
+// for (let i = 1; i <= 50; i++){
+//     console.log(`Voter number ${i} is currently voting in this small as town.`)
+// };
+
+
+//Looping through arrays
+// const andrew = [
+// "Andrew",
+// "Tran",
+// 30, 
+// "developer", 
+// ['Ted', 'David', 'Andrew', 'An']
+// ];
+
+// const types = [];
+
+// for(let i = 0; i < andrew.length; i++) {
+//     //reading the array
+//     console.log(andrew[i], typeof andrew[i]);
+//     //filling the array
+//     types.push(typeof andrew[i]);
+// };
+// console.log(types);
+
+    //calculating the age
+// const years = [1991, 1994, 1999, 2000, 2018];
+//     //empty array that holds the ages
+// const ages = [];
+
+// for(let i = 0; i < years.length; i++) {
+//     ages.push(2022 - years[i]);
+// }
+// console.log(ages);
+
+    //There are two statements for loops: continue and break
+
+    // continue: to exit the iteration of the loop and continue on the next.
+
+    // break: completely terminate the whole loop.
+// console.log("==================only strings!")
+// for (let i = 0; i < andrew.length; i++) {
+//     if(typeof andrew[i] !== 'string') continue;
+
+//     console.log(andrew[i], typeof andrew[i]);
+// }
+
+//Looping Arrays, Breaking, and Continuing exercise:
+
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+const percentageOfWorld1 = () => {
+    for(let i = 0; i < populations.length; i++) {
+    const percent = percentageOfWorld1(populations[i]);
+    percentages2.push(percent);
+}
+};
+console.log(percentages2);
+
+// const percentages = [
+// percentageOfWorld1(populations[0]),
+// percentageOfWorld1(populations[1]), 
+// percentageOfWorld1(populations[2]), 
+// percentageOfWorld1(populations[3])
+// ];
+// console.log(percentages);
+
+    //Use a for loop to compute an array called percentages2 that contains the percentages of the world population for the 4 population values
