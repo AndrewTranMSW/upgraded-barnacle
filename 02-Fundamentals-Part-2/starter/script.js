@@ -628,16 +628,16 @@
 
 //Looping Arrays, Breaking, and Continuing exercise:
 
-const populations = [10, 1441, 332, 83];
-const percentages2 = [];
+// const populations = [10, 1441, 332, 83];
+// const percentages2 = [];
 
-const percentageOfWorld1 = () => {
-    for(let i = 0; i < populations.length; i++) {
-    const percent = percentageOfWorld1(populations[i]);
-    percentages2.push(percent);
-}
-};
-console.log(percentages2);
+// const percentageOfWorld1 = () => {
+//     for(let i = 0; i < populations.length; i++) {
+//     const percent = percentageOfWorld1(populations[i]);
+//     percentages2.push(percent);
+// }
+// };
+// console.log(percentages2);
 
 // const percentages = [
 // percentageOfWorld1(populations[0]),
@@ -648,3 +648,101 @@ console.log(percentages2);
 // console.log(percentages);
 
     //Use a for loop to compute an array called percentages2 that contains the percentages of the world population for the 4 population values
+
+//Looping over arrays backwards
+
+const andrew = [
+"Andrew",
+"Tran",
+30, 
+"developer", 
+['Ted', 'David', 'Andrew', 'An']
+];
+
+for(let i = andrew.length - 1; i >= 0; i--) {
+    console.log(i, andrew[i]);
+};
+
+console.log("===================================");
+
+for(let exercise = 1; exercise <= 4; exercise++) {
+    console.log(`Starting exercise ${exercise}`)
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Lifting weights, repetition ${rep}.`)
+    };
+}
+
+console.log("===================================");
+//Exercise Looping over arrays backwards:
+let listOfNeighbors = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let i = 0; i < listOfNeighbors.length; i++){
+    for (let y = 0; y < listOfNeighbors[i].length; y++){
+        console.log(`Neighbor: ${listOfNeighbors[i][y]}`);
+    }
+};
+
+console.log("===================================");
+//WHILE LOOP
+
+    //Exercise from for loops:
+
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+    //The above for loop in while loop form
+let rep = 1;
+while (rep <=10) {
+    console.log(`WHILE: Lifting weights repetition ${rep}`);
+    rep++
+}
+
+    //rolling a die. Trunc converts the number from a decimal to a whole.
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`Loop is about to end...`);
+}
+
+//For loops are good to use if you know the length of the array, while loops would be used if you don't.
+console.log("===================================");
+
+
+//Coding Challenge 4
+
+    //Create an array 'bills' containing the 10 test bill values
+    //Create empty arrays for the 'tips' and the 'totals'
+    //Use the 'calcTip()' function from earlier to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = () => {
+        for (let i = 0; i < bills.length; i++) {
+            // console.log(bills[i]);
+            if(bills[i] >= 50 && bills[i] <= 300) {
+                const total15 = bills[i] * 1.15;
+                const tipAmount15 = bills[i] * .15;
+                tips.push(tipAmount15);
+                totals.push(total15);
+                console.log(`Your bill before tax is $${bills[i]}, your tip of 15% will be $${tipAmount15}. Your total with bill and tip will be $${total15}.`)
+            } else {
+                const total20 = bills[i] * 1.20;
+                const tipAmount20 = bills[i] * .20;
+                tips.push(tipAmount20);
+                totals.push(total20);
+                console.log(`Your bill before tax is $${bills[i]}, your tip of 20% will be $${tipAmount20}. Your total with bill and tip will be $${total20}.`)
+            }
+            
+        }
+    };
+calcTip();
+
+
+console.log(tips);
+console.log(totals);
