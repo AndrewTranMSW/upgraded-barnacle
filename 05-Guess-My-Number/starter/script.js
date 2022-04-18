@@ -15,14 +15,30 @@
 // document.querySelector('.guess').value = 22;
 // console.log((document.querySelector('.guess').value = 22));
 
-const number = Math.trunc(Math.random() * 20) + 1;
+console.log('Ex 72');
+// const number = Math.trunc(Math.random() * 20) + 1;
+
+// document.querySelector('.check').addEventListener('click', function () {
+//   const guess = Number(document.querySelector('.guess').value);
+//   console.log(guess, typeof guess);
+
+//   if (!guess) {
+//     document.querySelector('.message').textContent =
+//       'Not a valid number choice 😒';
+//   }
+// });
+
+// document.querySelector('.number').textContent = 13;
+// document.querySelector('.score').textContent = 69;
+// console.log((document.querySelector('.guess').value = 23));
+
+console.log('Ex 73');
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
+  console.log(typeof guess);
 
   if (!guess) {
-    document.querySelector('.message').textContent =
-      'Not a valid number choice 😒';
+    document.querySelector('.message').textContent = 'Please enter a number 😒';
   }
 });
