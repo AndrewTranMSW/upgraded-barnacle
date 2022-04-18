@@ -32,7 +32,9 @@ console.log('Ex 72');
 // document.querySelector('.score').textContent = 69;
 // console.log((document.querySelector('.guess').value = 23));
 
-console.log('Ex 73');
+console.log('Ex 74');
+
+const number = Math.random();
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
