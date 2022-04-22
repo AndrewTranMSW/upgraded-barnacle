@@ -416,10 +416,20 @@ console.log(`I like to drink ${age >= 18 ? "beer 🍻" : "juice 🧃"}`)
     //Test data: 275, 40, 430
 
 let tip;
+<<<<<<< HEAD
 const bill = 275;
+=======
+const bill = 40;
+>>>>>>> 5f8b2a9eb17f15620937bc4eb6a87330ff2485d9
 const tipAmount = bill >= 50 && bill <= 300 ? (tip = (bill * 1.15) - (bill)) : (tip = (bill * 1.20) - (bill))
 const total = tipAmount + bill;
 console.log(`The bill value is ${bill}, the tip amount is ${tipAmount}, and the total is ${total}.`)
+
+// JS releases and versions
+
+    // ECMAscript is the standard, JS is the language
+    //ES5 was released with lots of great features in 2009
+    //ES6 was released in 2015 and was the biggest update to the language ever
 
 
 
