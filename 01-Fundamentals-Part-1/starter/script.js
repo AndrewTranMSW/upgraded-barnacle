@@ -416,8 +416,8 @@ console.log(`I like to drink ${age >= 18 ? "beer 🍻" : "juice 🧃"}`)
     //Test data: 275, 40, 430
 
 let tip;
-const bill = 40;
-const tipAmount = bill > 50 && bill <= 300 ? (tip = (bill * 1.15) - (bill)) : (tip = (bill * 1.20) - (bill))
+const bill = 275;
+const tipAmount = bill >= 50 && bill <= 300 ? (tip = (bill * 1.15) - (bill)) : (tip = (bill * 1.20) - (bill))
 const total = tipAmount + bill;
 console.log(`The bill value is ${bill}, the tip amount is ${tipAmount}, and the total is ${total}.`)
 
