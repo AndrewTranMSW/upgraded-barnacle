@@ -1,28 +1,34 @@
 'use strict';
 
-function calcAge(birthYear) {
-  const age = 2022 - birthYear;
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
 
-  function printAge() {
-    const output = `You are ${age}, born in ${birthYear}.`;
-    console.log(output);
+// calcAge(1991);
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      var millenial = true;
-      const str = `Oh, and you're a millenial, ${firstName}`;
-      console.log(str);
+// const calcAgeArrow = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
 
-      function add(a, b) {
-        return a + b;
-      }
-    }
-    console.log(millenial);
-    console.log(add(2, 3));
-  }
-  printAge();
+// calcAgeArrow(1992);
 
-  return age;
-}
+const Andrew = {
+  year: 1991,
+  calcAge: function () {
+    console.log(2037 - this.year);
+  },
+};
 
-const firstName = 'Andrew';
-calcAge(1991);
+Andrew.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = Andrew.calcAge;
+matilda.calcAge();
+
+const f = Andrew.calcAge;
+f();
