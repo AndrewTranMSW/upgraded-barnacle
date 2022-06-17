@@ -93,3 +93,48 @@ console.log(fruits);
 fruits.unshift("papaya", "mango");
 console.log(fruits);
 //output = ['papaya', 'mango', 'banana', 'orange']
+
+//splice() changes an array by adding, removing, and inserting.
+//array.splice(index[, deleteCount, element1, ..., elementN])
+//index is the starting point for removing elements
+//deleteCount is the number of elements to be deleted
+//element1, ..., elementN is the element(s) to be added
+
+//remove with splice
+let dogBreeds = ["Lab", "Golden", "Pitbull", "Chihuahua", "Maltese"];
+dogBreeds.splice(1, 3);
+console.log(dogBreeds);
+//output = ["Lab", "Maltese"];
+
+//replace with splice
+let hungrySentence = ["I", "Am", "So", "Hungry", "Today"];
+console.log(hungrySentence);
+hungrySentence.splice(0, 4, "We", "Are", "Somewhat", "Thirsty");
+console.log(hungrySentence);
+
+//add with splice
+let kailhBox = ["Box Browns", "Box Whites", "Box Jades"];
+kailhBox.splice(3, 0, "Box Navy");
+console.log(kailhBox);
+
+//slice() copies a part of an array and returns that copied part as a NEW array--it doesn't change the original.
+//syntax: array.slice(start, end);
+//best way to use slice() is to assign it to a new variable
+let message = "congratulations";
+const abbreviated = message.slice(0, 7) + "s!";
+console.log(abbreviated);
+
+//filter() creates a new array if the items of an array pass a certain condition
+const numero = [1, -1, 2, 3, 69, 78];
+
+//regular function
+const normalFilter = numero.filter(function (value) {
+  return value >= 1;
+});
+//output = [1, 2, 3, 69, 78]
+
+//arrow function
+const coolFilter = numero.filter((n) => n >= 1);
+
+console.log(normalFilter, coolFilter);
+//output = [1, 2, 3, 69, 78]
