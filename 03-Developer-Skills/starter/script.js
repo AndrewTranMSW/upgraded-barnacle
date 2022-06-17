@@ -38,19 +38,58 @@
 // const joinedArr = temperatures.concat(temperatures2);
 // console.log(joinedArr);
 
-const measureKelvin = function () {
-  const measurement = {
-    type: "temp",
-    unit: "celsius",
-    value: Number(prompt("Degrees celsius:")),
-  };
-  console.log(measurement);
-  console.table(measurement);
-  // console.log(measurement.value);
-  // console.warn(measurement.value);
-  // console.error(measurement.value);
-  const kelvin = measurement.value + 273;
-  return kelvin;
-};
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temp",
+//     unit: "celsius",
+//     value: Number(prompt("Degrees celsius:")),
+//   };
+//   console.log(measurement);
+//   console.table(measurement);
+//   // console.log(measurement.value);
+//   // console.warn(measurement.value);
+//   // console.error(measurement.value);
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
 
-console.log(measureKelvin());
+// console.log(measureKelvin());
+
+//Array manipulation practice
+let numbers = [1, 2, 3, 4];
+let colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+let trueFalse = [true, false, true, false, true];
+let mixItUp = [1, "two", true, null];
+
+// toString() converts array to string, separated by commas.
+console.log(colors.toString());
+//output = red,orange,yellow,green,blue,violet
+
+// join() is similar to toString, but you can specify the separator in the parameter
+console.log(colors.join("#"));
+//output = red#orange#yellow#green#blue#violet
+
+// concat() combines 2 arrays together, or adds more items to an array then returns a new array
+let newArr = numbers.concat(colors);
+console.log(newArr);
+//output = [1, 2, 3, 4, 'red', 'orange', 'yellow', 'green', 'blue', 'violet']
+
+//push() adds to end of the array and changes the original
+let pushedArr = numbers.push(5, 6, 7);
+console.log(numbers);
+//output = [1, 2, 3, 4, 5, 6, 7]
+
+//pop() removes the last item at the end of an array and returns it.
+numbers.pop();
+console.log(numbers);
+//output = [1, 2, 3, 4, 5, 6]
+
+//shift() removes the first item of an array and returns it
+let fruits = ["apple", "banana", "orange"];
+fruits.shift();
+console.log(fruits);
+
+//unshift() adds to the first item of the array and changes it
+fruits.unshift("papaya", "mango");
+console.log(fruits);
+//output = ['papaya', 'mango', 'banana', 'orange']
