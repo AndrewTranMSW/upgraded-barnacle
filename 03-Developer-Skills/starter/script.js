@@ -138,3 +138,13 @@ const coolFilter = numero.filter((n) => n >= 1);
 
 console.log(normalFilter, coolFilter);
 //output = [1, 2, 3, 69, 78]
+
+//reduce(), returns the sum of all the elements in the array
+
+const numberz = [1, -1, 2, 3];
+
+let sum = 0;
+
+for (let n of numbers) sum += n;
+
+console.log(sum);
