@@ -147,4 +147,30 @@ let sum = 0;
 
 for (let n of numbers) sum += n;
 
-console.log(sum);
+// console.log(sum);
+
+class User {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+  login() {
+    console.log(
+      this.email,
+      `Just logged in and they are ${this.age} years old.`
+    );
+  }
+  logout() {
+    console.log(
+      this.email,
+      `Just logged out and they are ${this.age} years old.`
+    );
+  }
+}
+
+let userOne = new User("Andrew", 31, "ayooobbyhotmail.com");
+let userTwo = new User("Tom", 69, "hello@hotmail.com");
+
+userOne.login();
+userTwo.logout();
